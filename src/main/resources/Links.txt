@@ -1,0 +1,2 @@
+Link swagger: 		http://localhost:8081/swagger-ui.html
+Link BD in memory: 	http://localhost:8081/h2/
