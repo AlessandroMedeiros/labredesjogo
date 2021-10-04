@@ -1,5 +1,6 @@
 package labredes.controller;
 
+import labredes.controller.DTO.PerguntaDTO;
 import labredes.model.Pergunta;
 import labredes.service.PerguntaService;
 import labredes.service.RespostaService;
@@ -19,7 +20,7 @@ public class JogoController {
     private RespostaService respostaService;
 
     @GetMapping("/pergunta")
-    public Pergunta listarPerguntas(Integer level) {
+    public PerguntaDTO listarPerguntas(Integer level) {
         return perguntaService.getRandomPergunta(level);
     }
 

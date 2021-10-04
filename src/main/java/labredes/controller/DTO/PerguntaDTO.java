@@ -1,24 +1,24 @@
-package labredes.model;
+package labredes.controller.DTO;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import labredes.model.Resposta;
+
 import java.util.List;
 
-@Entity
-@Table(name = "pergunta")
-public class Pergunta implements Serializable {
+public class PerguntaDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @Column(name = "pergunta")
     private String pergunta;
-
-    @Column(name = "NIVEL_PERGUNTA")
     private Integer nivelPergunta;
+    private List<String> lista;
 
-    public Pergunta() {
+    public PerguntaDTO() {
+    }
+
+    public PerguntaDTO(Integer id, String pergunta, Integer nivelPergunta, List<String> lista) {
+        this.id = id;
+        this.pergunta = pergunta;
+        this.nivelPergunta = nivelPergunta;
+        this.lista = lista;
     }
 
     public Integer getId() {
@@ -43,5 +43,13 @@ public class Pergunta implements Serializable {
 
     public void setNivelPergunta(Integer nivelPergunta) {
         this.nivelPergunta = nivelPergunta;
+    }
+
+    public List<String> getLista() {
+        return lista;
+    }
+
+    public void setLista(List<String> lista) {
+        this.lista = lista;
     }
 }
