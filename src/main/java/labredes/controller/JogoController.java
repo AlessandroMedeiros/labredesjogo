@@ -1,6 +1,5 @@
 package labredes.controller;
 
-
 import labredes.model.Pergunta;
 import labredes.service.PerguntaService;
 import labredes.service.RespostaService;
